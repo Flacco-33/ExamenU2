@@ -1,0 +1,26 @@
+@model ExamenU2.Models.Usuario
+@{
+    ViewData["Title"] = "CrearCuenta";
+}
+<div class="row">
+    <div class="col-md-4 offset-md-4 mt-4 col-sm-4 offset-sm-2 col-4 offset-1">
+        <main class="form-signin w-100 m-auto">
+            <form method="post" asp-action="CrearCuenta">
+                <h1 class="h3 mb-5 fw-normal text-center">Crear Cuenta</h1>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" asp-for="NombreUsuario"
+                        placeholder="name@example.com">
+                    <label for="floatingInput" asp-for="NombreUsuario"></label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPassword" asp-for="Contraseña"
+                        placeholder="Password">
+                    <label for="floatingPassword" asp-for="Contraseña"></label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary mb-3" type="submit">Crear Cuenta</button>
+                <p class="text-center">Yatienes una cuenta? <a asp-action="Login">Inicia Sesión</a></p>
+            </form>
+        </main>
+    </div>
+</div>
